@@ -2,6 +2,7 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  getFirestore,
   app,
 } from "../firebase.js";
 
