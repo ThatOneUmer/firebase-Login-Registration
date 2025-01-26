@@ -40,15 +40,16 @@ let signUpUser = async (e) => {
     ).then(async (userCredential) => {
       const user = userCredential.user;
       console.log(user);
-      const docRef = await addDoc(collection(db, "users"), {
+      let ref = await doc(db, "users", user.uid);
+      const docRef = await setDoc(ref, {
         email: userEmail.value,
         city: userCitychecker(),
         name: `${userFirstname.value} ${userLastname.value}`,
+        fname: userFirstname.value,
         gender: usergenderChecker(),
         username: userName.value,
         userId: user.uid,
       });
-      console.log("User document written with ID: ", docRef.id);
       window.location.replace("./dashboard/dashboard.html");
     });
   } catch (error) {

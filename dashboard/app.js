@@ -1,4 +1,4 @@
-import { getAuth, signOut, onAuthStateChanged, app, getFirestore } from "../firebase.js";
+import { getAuth,getDoc,signOut, onAuthStateChanged, app, getFirestore, doc } from "../firebase.js";
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -6,10 +6,24 @@ let checkUser = async () => {
   try {
     await onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
-        console.log(user);
+        let Fname = document.getElementById("userFname");
+        let fullName = document.getElementById("ufname");
+        let userMail = document.getElementById("uename");
+        let userCity = document.getElementById("ucname");
+        let userGender = document.getElementById("ugname");
+
+        let dataCatcher = async () => {
+          const querySnapshot = await getDoc(doc(db, "users", uid));
+          const user = querySnapshot.data();
+
+          Fname.innerText = user.fname;
+          fullName.innerText = user.name;
+          userMail.innerText = user.email;
+          userCity.innerText = user.city;
+          userGender.innerText = user.gender;
+        }
+        dataCatcher()
         // ...
       } else {
         // User is signed out
@@ -23,11 +37,7 @@ let checkUser = async () => {
 };
 checkUser();
 
-var Fname = document.getElementById("userFname");
-var fullName = document.getElementById("ufname");
-var userMail = document.getElementById("uename");
-var userCity = document.getElementById("ucname");
-var userGender = document.getElementById("ugname");
+
 
 // Fname.innerText = loginUsers.firstName;
 // fullName.innerText = loginUsers.firstName + " " + loginUsers.lastName;
