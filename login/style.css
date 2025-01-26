@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: #171d25;
+  overflow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-body {
+  padding: 25px 25px 60px 25px;
+  background-color: #181a21;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.user-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+  color: #1999ff;
+}
+
+.pw-div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+  color: #1999ff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+
+#username {
+  width: 150%;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  outline: none;
+}
+
+#password {
+  width: 150%;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+h1 {
+  color: white;
+}
+
+.row-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  height: 100%;
+  width: 100%;
+}
+.code-box {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #1999ff;
+}
+
+.cd-img-code {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  border-radius: 5%;
+}
+
+.img {
+  height: 150px;
+  width: 150px;
+}
+
+.btn {
+  padding: 10px 35px;
+  width: 80%;
+  background-color: #1999ff;
+  border: none;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1997ffce;
+}
+
+.make-acc{
+  color: #1999ff;
+  display: flex;
+  gap: 4px;
+}
+
+.make-acc a
+{
+  color: white;
+}
+
+.make-acc a:hover{
+  color: green;
+  cursor: pointer;
+}
+
+.student-modal {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+#ah {
+  font-size: 25px;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 15px 15px 15px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+@media screen and (max-width: 429px) {
+  .code-box {
+    display: none;
+  }
+
+  #username {
+    width: 80%;
+  }
+
+  #password {
+    width: 80%;
+  }
+  .row-box {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form
+  {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .make-acc{
+    display: block;
+    text-align: center;
+  }
+
+  .h1-form{text-align: center;}
+
+  .user-div{width: 100%; display: flex; align-items: center;}
+  .pw-div{width: 100%; display: flex; align-items: center;}
+
+  .btn{width: 100%;}
+}

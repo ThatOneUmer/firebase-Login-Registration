@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="form-div">
+        <h1 id="heading">Sign Up</h1>
+        <form class="form" id="form-box">
+          <div class="userNames">
+            <div class="userFirstname user-box">
+              <label for="Fname">First Name</label>
+              <input
+                type="text"
+                name="fname"
+                id="Fname"
+                class="inputUser"
+                placeholder="type your first name"
+                required
+              />
+            </div>
+            <div class="userLastname user-box">
+              <label for="Lname">Last Name</label>
+              <input
+                type="text"
+                name="fname"
+                id="Lname"
+                class="inputUser"
+                placeholder="type your Last name"
+                required
+              />
+            </div>
+          </div>
+          <div class="userThings">
+            <div class="user-name user-box">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                class="inputUser"
+                placeholder="type username"
+                required
+              />
+              <span id="error"></span>
+            </div>
+            <div class="user-password user-box">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="inputUser"
+                placeholder="create Password"
+                required
+              />
+              <span id="error"></span>
+            </div>
+          </div>
+          <div class="user-email user-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="inputUser"
+              placeholder="abc@gmail.com"
+              required
+            />
+            <span id="error" class="emailError"></span>
+          </div>
+          <div class="radio-btn">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" checked value="male" id="male" />
+            <label for="female">Female</label>
+            <input type="radio" value="female" name="gender" id="female" />
+          </div>
+          <div class="city-box">
+            <label for="userCity">City</label>
+            <select name="city" id="userCity">
+              <option class="opt" value="empty" hidden>Select Your City</option>
+              <option class="opt" value="karachi">karachi</option>
+              <option class="opt" value="islamabad">Islamabad</option>
+              <option class="opt" value="lahore">Lahore</option>
+              <option class="opt" value="sukkur">Sukkur</option>
+            </select>
+            <span id="error" class="er-2"></span>
+          </div>
+          <button type="submit" class="btn-submit">Submit</button>
+          <div class="login-div">
+            <p>Have an Account? ></p><a href="./login/login.html">Sign in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

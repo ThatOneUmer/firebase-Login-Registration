@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quicksand:wght@300..700&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.main-div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171d25;
+  overflow-x: hidden;
+}
+
+.form-div {
+  padding: 30px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#error {
+  display: none;
+  color: red;
+  font-size: 12px;
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+
+h1{
+  color: white;
+  align-self: center;
+}
+
+.user-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #1999ff;
+}
+
+.inputUser
+{
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.userNames
+{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.userThings
+{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#userCity{
+  cursor: pointer;
+}
+
+.btn-submit
+{
+  background-color:  #1999ff;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-submit:hover{
+  background-color: green;
+}
+
+.login-div
+{
+  display: flex;
+  gap: 4px;
+}
+
+.login-div a
+{
+  color: #1999ff;
+}
+
+.login-div a:hover{text-decoration: underline; color: green;}
+
+
+@media screen and (max-width: 308px){
+  .userNames
+  {
+    flex-direction: column;
+  }
+
+  .userThings{
+    flex-direction: column;
+  }
+
+  .main-div{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+}
+
