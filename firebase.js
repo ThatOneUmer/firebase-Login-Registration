@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  deleteUser,
 } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import {
   getFirestore,
@@ -45,5 +46,6 @@ export {
   doc,
   setDoc,
   updateDoc,
+  deleteUser,
   app,
 };
