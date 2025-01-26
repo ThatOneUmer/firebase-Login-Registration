@@ -1,4 +1,12 @@
-import { getAuth,getDoc,signOut, onAuthStateChanged, app, getFirestore, doc } from "../firebase.js";
+import {
+  getAuth,
+  getDoc,
+  signOut,
+  onAuthStateChanged,
+  app,
+  getFirestore,
+  doc,
+} from "../firebase.js";
 const auth = getAuth(app);
 const db = getFirestore(app);
 
@@ -22,8 +30,8 @@ let checkUser = async () => {
           userMail.innerText = user.email;
           userCity.innerText = user.city;
           userGender.innerText = user.gender;
-        }
-        dataCatcher()
+        };
+        dataCatcher();
         // ...
       } else {
         // User is signed out
@@ -36,25 +44,6 @@ let checkUser = async () => {
   }
 };
 checkUser();
-
-
-
-// Fname.innerText = loginUsers.firstName;
-// fullName.innerText = loginUsers.firstName + " " + loginUsers.lastName;
-// userMail.innerText = loginUsers.useremail;
-// userCity.innerText = loginUsers.usercity;
-// userGender.innerText = loginUsers.usergender;
-
-// function auTo() {
-//   for (let i = 0; i < loginUsers.length; i++) {
-//     Fname.innerText = loginUsers[i].firstName;
-//     fullName.innerText = loginUsers[i].firstName + " " + loginUsers[i].lastName;
-//     userMail.innerText = loginUsers[i].useremail;
-//     userCity.innerText = loginUsers[i].usercity;
-//     userGender.innerText = loginUsers[i].usergender;
-//   }
-// }
-// auTo();
 
 let btn = document.querySelector("#signOut");
 let logout = async () => {
