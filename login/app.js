@@ -37,54 +37,38 @@ checkUser();
 let userName = document.getElementById("username");
 let passWord = document.getElementById("password");
 
-let signInUser = async (e) => {
-  e.preventDefault();
+let signInUser = async (form) => {
+  form.preventDefault();
   await signInWithEmailAndPassword(auth, userName.value, passWord.value)
     .then((userCredential) => {
       // Signed in
+      const user = userCredential.user;
       let notiFy = document.getElementById("noti");
       let notiHeading = document.getElementById("noti-heading");
-      notiHeading.innerText = "Sign-In Successfully";
+      notiHeading.innerText = "Sign-ip Successfully";
       notiFy.style.display = "flex";
+      let reDirecting = () => {
+        window.location.replace("./dashboard/dashboard.html");
+      };
+      setTimeout(reDirecting, 3000);
+      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      console.log("error aagaya ", errorMessage);
+      let notiFy = document.getElementById("noti");
+      let notiHeading = document.getElementById("noti-heading");
+      notiHeading.innerText = "Wrong Credentials!!";
+      notiFy.style.display = "flex";
     });
 };
 let formBox = document.getElementById("formBox");
 formBox.addEventListener("submit", signInUser);
 
-// var usersData = JSON.parse(localStorage.getItem("Users"));
-// console.log(usersData);
-
-// function searchinguserData(user) {
-//   for (let i = 0; i < usersData.length; i++) {
-//     if (
-//       user.username === usersData[i].username &&
-//       user.password === usersData[i].password
-//     ) {
-//       return usersData[i];
-//     }
-//   }
-// }
-
-// function submitData(e) {
-//   e.preventDefault();
-//   var userName = document.getElementById("username").value;
-//   var passWord = document.getElementById("password").value;
-//   var error = document.getElementsByClassName("error");
-
-//   var loginUser = searchinguserData({ username: userName, password: passWord });
-
-//   if (loginUser) {
-//     console.log(loginUser);
-//     localStorage.setItem("login", JSON.stringify(loginUser));
-//     window.location.replace("../dashboard/dashboard.html");
-//   } else {
-//     error[0].style.display = "block";
-//     error[0].innerText = "wrong credentials";
-//     error[1].style.display = "block";
-//     error[1].innerText = "wrong credentials";
-//   }
-// }
+let closeBtn = document.getElementById("closeBtn");
+let closeTop = () => {
+  let notiFy = document.getElementById("noti");
+  notiFy.style.display = "none";
+};
+closeBtn.addEventListener("click", closeTop);
