@@ -123,18 +123,17 @@ h1 {
   background-color: #1997ffce;
 }
 
-.make-acc{
+.make-acc {
   color: #1999ff;
   display: flex;
   gap: 4px;
 }
 
-.make-acc a
-{
+.make-acc a {
   color: white;
 }
 
-.make-acc a:hover{
+.make-acc a:hover {
   color: green;
   cursor: pointer;
 }
@@ -167,6 +166,23 @@ h1 {
   text-align: left;
 }
 
+.noti {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+}
+
+.noti-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 15px;
+  color: white;
+  background-color: #3300ff;
+}
+
 @media screen and (max-width: 429px) {
   .code-box {
     display: none;
@@ -184,21 +200,32 @@ h1 {
     align-items: center;
   }
 
-  .form
-  {
+  .form {
     justify-content: center;
     align-items: center;
   }
 
-  .make-acc{
+  .make-acc {
     display: block;
     text-align: center;
   }
 
-  .h1-form{text-align: center;}
+  .h1-form {
+    text-align: center;
+  }
 
-  .user-div{width: 100%; display: flex; align-items: center;}
-  .pw-div{width: 100%; display: flex; align-items: center;}
+  .user-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .pw-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
 
-  .btn{width: 100%;}
+  .btn {
+    width: 100%;
+  }
 }

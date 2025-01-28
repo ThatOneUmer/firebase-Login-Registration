@@ -40,17 +40,25 @@ let signUpUser = async (e) => {
     ).then(async (userCredential) => {
       const user = userCredential.user;
       console.log(user);
+      let notiFy = document.getElementById("noti");
+      let notiHeading = document.getElementById("noti-heading");
+      notiHeading.innerText = "Sign-up Successfully";
+      notiFy.style.display = "flex";
       let ref = await doc(db, "users", user.uid);
       const docRef = await setDoc(ref, {
         email: userEmail.value,
         city: userCitychecker(),
         name: `${userFirstname.value} ${userLastname.value}`,
         fname: userFirstname.value,
+        lname: userLastname.value,
         gender: usergenderChecker(),
         username: userName.value,
         userId: user.uid,
       });
-      window.location.replace("./dashboard/dashboard.html");
+      let reDirecting = () => {
+        window.location.replace("./dashboard/dashboard.html");
+      };
+      setTimeout(reDirecting, 3000);
     });
   } catch (error) {
     console.error("Error during sign-up:", error);
@@ -75,4 +83,11 @@ let checkUser = async () => {
   }
 };
 checkUser();
+
+let closeBtn = document.getElementById("closeBtn");
+let closeTop = () => {
+  let notiFy = document.getElementById("noti");
+  notiFy.style.display = "none";
+};
+closeBtn.addEventListener("click", closeTop);
 

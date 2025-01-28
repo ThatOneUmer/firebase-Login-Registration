@@ -22,45 +22,136 @@
   gap: 10px;
 }
 
-h1{
-    color: #1999ff;
-    text-align: center;
+h1 {
+  color: #1999ff;
+  text-align: center;
 }
 
-.user-data
-{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    border: 1px solid white;
-    color: white;
-    padding: 15px 15px 15px 15px;
+.user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  border: 1px solid white;
+  color: white;
+  padding: 15px 15px 15px 15px;
 }
 
-
-.user-box{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+.user-box {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
-.col{
-    color: #1999ff;
-    text-transform: capitalize;
+.col {
+  color: #1999ff;
+  text-transform: capitalize;
 }
 
-.tn{
-    text-transform: lowercase !important;
+.tn {
+  text-transform: lowercase !important;
 }
 
-.btn{
-    color: white;
-    background-color: #1999ff;
-    padding: 15px 25px;
-    border: none;
+.buttons {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.btn:hover{
-    background-color: red;
-    cursor: pointer;
+.btn {
+  color: white;
+  background-color: #1999ff;
+  padding: 15px 25px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.main-top {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.574);
+  backdrop-filter: blur(5px);
+}
+
+.top-box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 10px 10px 10px;
+  color: white;
+  background-color: #171d2595;
+  border: 1px solid white;
+}
+
+.top-head {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-inp-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+#gender {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.input-fields {
+  background-color: transparent;
+  color: white;
+  padding: 7px 7px;
+  width: 120px;
+}
+
+.input-fields::placeholder {
+  color: #ffffff;
+}
+
+.opt {
+  color: black !important;
+}
+
+label {
+  color: #1999ff;
+}
+
+.noti {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+}
+
+.noti-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 15px;
+  color: white;
+  background-color: #3300ff;
 }

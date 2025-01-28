@@ -16,7 +16,10 @@ let checkUser = async () => {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
         const uid = user.uid;
-        window.location.replace("../dashboard/dashboard.html");
+        let reDirecting = () => {
+          window.location.replace("../dashboard/dashboard.html");
+        }
+        setTimeout(reDirecting, 3000)
         console.log(user);
         // ...
       } else {
@@ -39,10 +42,10 @@ let signInUser = async (e) => {
   await signInWithEmailAndPassword(auth, userName.value, passWord.value)
     .then((userCredential) => {
       // Signed in
-      const user = userCredential.user;
-      window.location.replace("../dashboard/dashboard.html");
-      console.log(user);
-      // ...
+      let notiFy = document.getElementById("noti");
+      let notiHeading = document.getElementById("noti-heading");
+      notiHeading.innerText = "Sign-In Successfully";
+      notiFy.style.display = "flex";
     })
     .catch((error) => {
       const errorCode = error.code;

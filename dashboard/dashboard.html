@@ -1,25 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="user-box">
-            <h1>Welcome Back <span id="userFname"></span></h1>
-            <div class="user-data">
-             <span>Name : <strong id="ufname" class="col"></strong></span>
-             <span>Email : <strong id="uename" class="col tn"></strong></span>
-             <span>City : <strong id="ucname" class="col"></strong></span>
-             <span>Gender : <strong id="ugname" class="col"></strong></span>
-            </div>
+      <div class="user-box">
+        <h1>Welcome Back <span id="userFname"></span></h1>
+        <div class="user-data">
+          <span>Name : <strong id="ufname" class="col"></strong></span>
+          <span>Email : <strong id="uename" class="col tn"></strong></span>
+          <span>City : <strong id="ucname" class="col"></strong></span>
+          <span>Gender : <strong id="ugname" class="col"></strong></span>
         </div>
+      </div>
+      <div class="buttons">
         <button class="btn" id="signOut">Sign out</button>
+        <button class="btn" id="updateAcc">Update Info</button>
         <button class="btn" id="deleteAcc">Delete Account</button>
+      </div>
+    </div>
+    <div class="main-top" id="main-top">
+      <div class="top-box">
+        <div class="top-head">
+          <button class="btn" id="cross">X</button>
+        </div>
+        <h1>Update your info</h1>
+        <div class="top-inp-fields">
+          <div class="inputs">
+            <label for="upd-fname">First Name :</label>
+            <input
+              type="text"
+              id="upd-fname"
+              class="input-fields"
+              placeholder="Enter your first name"
+            />
+          </div>
+          <div class="inputs">
+            <label for="upd-lname">Last Name :</label>
+            <input
+              type="text"
+              id="upd-lname"
+              class="input-fields"
+              placeholder="Enter your Last name"
+            />
+          </div>
+          <div class="inputs">
+            <label for="upd-city">City :</label>
+            <select name="city" class="input-fields city" id="upd-city">
+              <option class="opt" value="empty" hidden>Select Your City</option>
+              <option class="opt" value="karachi">karachi</option>
+              <option class="opt" value="islamabad">Islamabad</option>
+              <option class="opt" value="lahore">Lahore</option>
+              <option class="opt" value="sukkur">Sukkur</option>
+            </select>
+          </div>
+          <div class="inputs" id="gender">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" checked value="male" id="male" />
+            <label for="female">Female</label>
+            <input type="radio" value="female" name="gender" id="female" />
+          </div>
+        </div>
+        <button class="btn" id="updatedData">Update</button>
+      </div>
+    </div>
+    <div class="noti" id="noti">
+      <div class="noti-box">
+        <h3 id="noti-heading">Updated Succesfully</h3>
+        <button class="btn" id="closeBtn">close</button>
+      </div>
     </div>
     <script type="module" src="./app.js"></script>
-</body>
+  </body>
 </html>
